@@ -29,8 +29,12 @@ class Triangulo{
         return this.ladoC;
     }
 
-    calcularAltura() : number{
-        let altura: number = Math.sqrt((this.getLadoA() / 2)**2 + this.getLadoB()**2)
+    public grausParaRadianos(angulo : number) : number{
+        return angulo * (Math.PI / 180);
+    }
+
+    public calcularAltura() : number{
+        let altura: number = Math.sqrt(this.ladoB**2 - (this.getLadoA() / 2)**2)
 
         return altura;
     }
@@ -56,19 +60,19 @@ class Triangulo{
     public calcularAreaTrianguloSemUmLadoEUmAngulo() : number {
 
         if(this.ladoA != null && this.ladoB != null && this.ladoC == null){
-            let seno : number = Math.sin(this.anguloAB * (Math.PI / 180));
+            let seno : number = Math.sin(this.grausParaRadianos(this.anguloAB));
 
             return (this.ladoA * this.ladoB * seno) / 2;
         }
 
         else if(this.ladoB != null && this.ladoC != null && this.ladoA == null){
-            let seno : number = Math.sin(this.anguloBC * (Math.PI / 180));
+            let seno : number = Math.sin(this.grausParaRadianos(this.anguloBC));
 
             return (this.ladoB * this.ladoC * seno) / 2;
         }
 
         else if(this.ladoC != null && this.ladoA != null && this.ladoB == null){
-            let seno : number = Math.sin(this.anguloCA * (Math.PI / 180));
+            let seno : number = Math.sin(this.grausParaRadianos(this.anguloCA));
 
             return (this.ladoC * this.ladoA * seno) / 2;
         }
@@ -78,6 +82,52 @@ class Triangulo{
         let semi : number = (this.ladoA + this.ladoB + this.ladoC) / 2;
 
         return Math.sqrt(semi * (semi - this.ladoA) * (semi - this.ladoB) * (semi - this.ladoC));
+    }
+
+    public calcularAreaTrianguloComUmLadoEUmAngulo() : number {
+            if(this.ladoA != null){
+                if(this.anguloAB != null){
+                    this.ladoC = Math.tan(this.grausParaRadianos(this.anguloAB)) * this.ladoA;
+
+                    return (this.ladoC * this.ladoA) / 2;
+                }
+
+                else if(this.anguloBC != null){
+                    this.ladoC = this.ladoA / Math.tan(this.grausParaRadianos(this.anguloBC));
+
+                    return (this.ladoC * this.ladoA) / 2;
+                }
+            }
+
+            else if(this.ladoC != null){
+                if(this.anguloAB != null){
+                    this.ladoA = this.ladoC / Math.tan(this.grausParaRadianos(this.anguloAB));
+
+                    return (this.ladoC * this.ladoA) / 2;
+                }
+
+                else if(this.anguloBC != null){
+                    this.ladoA = this.ladoC * Math.tan(this.grausParaRadianos(this.anguloBC));
+
+                    return (this.ladoA * this.ladoC) / 2;
+                }
+            }
+
+            else if(this.ladoB != null){
+                if(this.anguloAB != null){
+                    this.ladoA = Math.cos(this.grausParaRadianos(this.anguloAB)) * this.ladoB;
+                    this.ladoC = Math.sqrt(this.ladoB**2 - this.ladoA**2);
+
+                    return (this.ladoA * this.ladoC) / 2;
+                }
+
+                else if(this.anguloBC != null){
+                    this.ladoA = Math.sin(this.grausParaRadianos(this.anguloBC)) * this.ladoB;
+                    this.ladoC = Math.sqrt(this.ladoB**2 - this.ladoA**2);
+
+                    return (this.ladoA * this.ladoC) / 2;
+                }
+            }
     }
     
 }
