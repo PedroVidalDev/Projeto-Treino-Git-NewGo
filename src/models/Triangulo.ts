@@ -9,6 +9,18 @@ class Triangulo{
         this.ladoC = ladoC;
     }
 
+    getLadoA() : Number{
+        return this.ladoA;
+    }
+
+    getLadoB() : Number{
+        return this.ladoB;
+    }
+
+    getLadoC() : Number{
+        return this.ladoC;
+    }
+
     calcularArea() {
 
         return 0;
