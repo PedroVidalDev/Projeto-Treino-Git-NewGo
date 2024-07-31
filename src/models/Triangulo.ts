@@ -35,7 +35,7 @@ class Triangulo{
         return altura;
     }
 
-    public calcularAreaTrianguloRetangulo() : number {
+    public calcularAreaTrianguloIsosceles() : number {
         let area : number = (this.calcularAltura() * this.ladoA) / 2;
 
         return area;
