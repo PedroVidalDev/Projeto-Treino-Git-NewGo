@@ -1,4 +1,4 @@
-class Triangulo{
+abstract class Triangulo{
     private ladoA : number;
     private ladoB : number;
     private ladoC : number;
@@ -27,6 +27,18 @@ class Triangulo{
 
     public getLadoC(): number{
         return this.ladoC;
+    }
+    
+    public getAnguloAB() : number{
+        return this.anguloAB;
+    }
+
+    public getAnguloBC() : number{
+        return this.anguloBC;
+    }
+
+    public getAnguloCA(): number{
+        return this.anguloCA;
     }
 
     calcularAltura() : number{
