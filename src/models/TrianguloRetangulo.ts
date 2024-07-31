@@ -6,11 +6,11 @@ class TrianguloRetangulo extends Triangulo{
     }
 
     public calcularAltura() : number {
-        return this.ladoB;
+        return this.ladoC;
     }
 
     public calcularArea() : number {
-        let area : number = (this.ladoB * this.ladoA) / 2;
+        let area : number = (this.ladoC * this.ladoA) / 2;
 
         return area;
     }
