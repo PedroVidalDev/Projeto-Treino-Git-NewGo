@@ -73,6 +73,12 @@ class Triangulo{
             return (this.ladoC * this.ladoA * seno) / 2;
         }
     }
+
+    public calcularFormulaHerao() : number{
+        let semi : number = (this.ladoA + this.ladoB + this.ladoC) / 2;
+
+        return Math.sqrt(semi * (semi - this.ladoA) * (semi - this.ladoB) * (semi - this.ladoC));
+    }
     
 }
 
