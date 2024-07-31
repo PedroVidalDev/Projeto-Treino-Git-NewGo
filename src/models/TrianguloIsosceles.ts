@@ -1,6 +1,6 @@
 import Triangulo from "./Triangulo.js";
 
-class trianguloIsosceles extends Triangulo{
+class TrianguloEquilatero extends Triangulo{
     constructor(lado : number, base : number){
         super(lado, lado, base);
     }
@@ -18,4 +18,4 @@ class trianguloIsosceles extends Triangulo{
     }
 }
 
-export default trianguloIsosceles;
+export default TrianguloEquilatero;
