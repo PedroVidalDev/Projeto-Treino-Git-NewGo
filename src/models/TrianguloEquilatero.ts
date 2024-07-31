@@ -6,7 +6,7 @@ class TrianguloEquilatero extends Triangulo{
     }
 
     public calcularAltura(): number {
-        let altura : number = Math.sqrt((this.getLadoA() / 2)**2 + this.getLadoB()**2)
+        let altura : number = (this.ladoA * Math.sqrt(3)) / 2;
 
         return altura;
     }
