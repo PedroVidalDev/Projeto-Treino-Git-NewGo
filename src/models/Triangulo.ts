@@ -7,7 +7,7 @@ class Triangulo{
     private anguloBC : number;
     private anguloCA : number;
 
-    constructor(ladoA : number, ladoB : number, ladoC : number, anguloAB : number, anguloBC : number, anguloCA : number){
+    constructor(ladoA : number = null, ladoB : number = null, ladoC : number = null, anguloAB : number = null, anguloBC : number = null, anguloCA : number = null){
         this.ladoA = ladoA;
         this.ladoB = ladoB;
         this.ladoC = ladoC;
@@ -55,19 +55,19 @@ class Triangulo{
 
     public calcularAreaTrianguloSemUmLadoEUmAngulo() : number {
 
-        if(this.ladoA != -1 && this.ladoB != -1){
+        if(this.ladoA != null && this.ladoB != null && this.ladoC == null){
             let seno : number = Math.sin(this.anguloAB * (Math.PI / 180));
 
             return (this.ladoA * this.ladoB * seno) / 2;
         }
 
-        else if(this.ladoB != -1 && this.ladoC != -1){
+        else if(this.ladoB != null && this.ladoC != null && this.ladoA == null){
             let seno : number = Math.sin(this.anguloBC * (Math.PI / 180));
 
             return (this.ladoB * this.ladoC * seno) / 2;
         }
 
-        else if(this.ladoC != -1 && this.ladoA != -1){
+        else if(this.ladoC != null && this.ladoA != null && this.ladoB == null){
             let seno : number = Math.sin(this.anguloCA * (Math.PI / 180));
 
             return (this.ladoC * this.ladoA * seno) / 2;
