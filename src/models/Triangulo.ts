@@ -3,10 +3,18 @@ class Triangulo{
     private ladoB : number;
     private ladoC : number;
 
-    constructor(ladoA : number, ladoB : number, ladoC : number){
+    private anguloAB : number;
+    private anguloBC : number;
+    private anguloCA : number;
+
+    constructor(ladoA : number, ladoB : number, ladoC : number, anguloAB : number, anguloBC : number, anguloCA : number){
         this.ladoA = ladoA;
         this.ladoB = ladoB;
         this.ladoC = ladoC;
+
+        this.anguloAB = anguloAB;
+        this.anguloBC = anguloBC;
+        this.anguloCA = anguloCA;
     }
 
     public getLadoA() : number{
@@ -27,8 +35,14 @@ class Triangulo{
         return altura;
     }
 
-    public calcularAreaTrianguloRetangulo() {
+    public calcularAreaTrianguloRetangulo() : number {
         let area : number = (this.calcularAltura() * this.ladoA) / 2;
+
+        return area;
+    }
+
+    public calcularAreaTrianguloEquilatero() : number{
+        let area = (this.getLadoA()**2 * Math.sqrt(3)) / 4;
 
         return area;
     }
