@@ -1,30 +1,38 @@
 class Triangulo{
-    private ladoA : Number;
-    private ladoB : Number;
-    private ladoC : Number;
+    private ladoA : number;
+    private ladoB : number;
+    private ladoC : number;
 
-    constructor(ladoA : Number, ladoB : Number, ladoC : Number){
+    constructor(ladoA : number, ladoB : number, ladoC : number){
         this.ladoA = ladoA;
         this.ladoB = ladoB;
         this.ladoC = ladoC;
     }
 
-    getLadoA() : Number{
+    public getLadoA() : number{
         return this.ladoA;
     }
 
-    getLadoB() : Number{
+    public getLadoB() : number{
         return this.ladoB;
     }
 
-    getLadoC() : Number{
+    public getLadoC(): number{
         return this.ladoC;
     }
 
-    calcularArea() {
+    calcularAltura() : number{
+        let altura: number = Math.sqrt((this.getLadoA() / 2)**2 + this.getLadoB()**2)
 
-        return 0;
+        return altura;
     }
+
+    public calcularAreaTrianguloRetangulo() {
+        let area : number = (this.calcularAltura() * this.ladoA) / 2;
+
+        return area;
+    }
+    
 }
 
 export default Triangulo;
