@@ -48,9 +48,30 @@ class Triangulo{
     }
 
     public calcularAreaTrianguloEquilatero() : number{
-        let area = (this.getLadoA()**2 * Math.sqrt(3)) / 4;
+        let area : number = (this.getLadoA()**2 * Math.sqrt(3)) / 4;
 
         return area;
+    }
+
+    public calcularAreaTrianguloSemUmLadoEUmAngulo() : number {
+
+        if(this.ladoA != -1 && this.ladoB != -1){
+            let seno : number = Math.sin(this.anguloAB * (Math.PI / 180));
+
+            return (this.ladoA * this.ladoB * seno) / 2;
+        }
+
+        else if(this.ladoB != -1 && this.ladoC != -1){
+            let seno : number = Math.sin(this.anguloBC * (Math.PI / 180));
+
+            return (this.ladoB * this.ladoC * seno) / 2;
+        }
+
+        else if(this.ladoC != -1 && this.ladoA != -1){
+            let seno : number = Math.sin(this.anguloCA * (Math.PI / 180));
+
+            return (this.ladoC * this.ladoA * seno) / 2;
+        }
     }
     
 }
