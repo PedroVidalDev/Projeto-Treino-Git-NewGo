@@ -1,5 +1,8 @@
 import { exit } from "process";
 import * as scanner from "readline-sync";
+import MenuRetangulo from "./MenuRetangulo";
+import MenuIsosceles from "./MenuIsosceles";
+import MenuEquilatero from "./MenuEquilatero";
 
 class Menu{
     public static mostrarMenu() : void {
@@ -8,14 +11,14 @@ class Menu{
 
         switch (escolha) {
             case 1:
-                
+                MenuRetangulo.menuRetangulo();
                 break;
             case 2:
-
+                MenuIsosceles.menuIsosceles();
                 break;
 
             case 3:
-
+                MenuEquilatero.menuEquilatero();
                 break;
 
             case 4:
