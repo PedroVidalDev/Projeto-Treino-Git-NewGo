@@ -3,7 +3,7 @@ import Triangulo from "./Triangulo.js";
 class TrianguloIsosceles extends Triangulo{
     private altura : number;
 
-    constructor(base : number, lado : number, altura : number){
+    constructor(base : number, lado : number, altura : number = null){
         super(base, lado, lado);
         this.altura = altura;
     }
@@ -13,8 +13,8 @@ class TrianguloIsosceles extends Triangulo{
     }
 
     public calcularAltura(): number {
-        let altura : number = Math.sqrt((this.ladoB**2) - ((this.ladoA / 2)**2))
-        return altura;
+        this.altura = Math.sqrt((this.ladoB**2) - ((this.ladoA / 2)**2))
+        return this.altura;
     }
 
     public calcularArea() : number {
