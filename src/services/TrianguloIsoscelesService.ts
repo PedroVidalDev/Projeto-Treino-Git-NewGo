@@ -1,5 +1,7 @@
+import TrianguloIsosceles from "../models/TrianguloIsosceles.js";
+
 class TrianguloIsoscelesService{
-    public verificar(lado : number = null, base : number = null, altura: number = null) : void{
+    public verificar(lado : number = null, base : number = null, altura: number = null) : TrianguloIsosceles{
         if(lado <= 0 || base <= 0){
             throw new Error("Lado deve ser maior que zero.");
         }
@@ -7,5 +9,8 @@ class TrianguloIsoscelesService{
         if(lado < base/2){
             throw new Error("O lado de um triângulo isósceles deve ser maior do que a metade de sua base.");
         } 
+
+        let isosceles : TrianguloIsosceles = new TrianguloIsosceles(base, lado, altura);
+        return isosceles;
     }
 }
