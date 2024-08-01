@@ -1,8 +1,15 @@
 import Triangulo from "./Triangulo.js";
 
 class TrianguloIsosceles extends Triangulo{
-    constructor(base : number, lado : number){
+    private altura : number;
+
+    constructor(base : number, lado : number, altura : number){
         super(base, lado, lado);
+        this.altura = altura;
+    }
+
+    public getAltura() : number {
+        return this.altura;
     }
 
     public calcularAltura(): number {
