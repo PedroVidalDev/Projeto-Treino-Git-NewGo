@@ -14,3 +14,5 @@ class TrianguloIsoscelesService{
         return isosceles;
     }
 }
+
+export default TrianguloIsoscelesService;

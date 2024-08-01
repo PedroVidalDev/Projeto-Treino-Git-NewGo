@@ -10,3 +10,5 @@ class TrianguloEquilateroService{
         return equilatero;
     }
 }
+
+export default TrianguloEquilateroService;
