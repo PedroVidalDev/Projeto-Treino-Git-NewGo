@@ -3,18 +3,10 @@ abstract class Triangulo{
     protected ladoB : number;
     protected ladoC : number;
 
-    protected anguloAB : number;
-    protected anguloBC : number;
-    protected anguloCA : number;
-
-    constructor(ladoA : number = null, ladoB : number = null, ladoC : number = null, anguloAB : number = null, anguloBC : number = null, anguloCA : number = null){
+    constructor(ladoA : number = null, ladoB : number = null, ladoC : number = null){
         this.ladoA = ladoA;
         this.ladoB = ladoB;
         this.ladoC = ladoC;
-
-        this.anguloAB = anguloAB;
-        this.anguloBC = anguloBC;
-        this.anguloCA = anguloCA;
     }
 
     public getLadoA() : number{
