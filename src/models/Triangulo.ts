@@ -28,18 +28,6 @@ abstract class Triangulo{
     public getLadoC(): number{
         return this.ladoC;
     }
-    
-    public getAnguloAB() : number{
-        return this.anguloAB;
-    }
-
-    public getAnguloBC() : number{
-        return this.anguloBC;
-    }
-
-    public getAnguloCA(): number{
-        return this.anguloCA;
-    }
 
     public abstract calcularAltura() : number;
     public abstract calcularArea() : number;

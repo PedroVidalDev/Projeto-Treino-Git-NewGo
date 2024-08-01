@@ -1,8 +1,8 @@
 import Triangulo from "./Triangulo.js";
 
 class TrianguloRetangulo extends Triangulo{
-    constructor(ladoA : number = null, ladoB : number = null, ladoC : number = null, anguloAB : number = null, anguloBC : number = null, anguloCA : number = null){
-        super(ladoA, ladoB, ladoC, anguloAB, anguloBC, anguloCA);
+    constructor(ladoA : number = null, ladoB : number = null, ladoC : number = null){
+        super(ladoA, ladoB, ladoC);
     }
 
     public calcularAltura() : number {
