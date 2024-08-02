@@ -1,7 +1,7 @@
 import TrianguloEquilatero from "../models/TrianguloEquilatero.js";
 
 class TrianguloEquilateroService{
-    public verificar(lado : number = null) : TrianguloEquilatero{
+    public verificarDadosTrianguloEquilatero(lado : number = null) : TrianguloEquilatero{
         if(lado <= 0){
             throw new Error("Lado deve ser maior que 0.");
         } 

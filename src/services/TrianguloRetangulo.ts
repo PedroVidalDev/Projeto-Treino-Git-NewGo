@@ -1,7 +1,7 @@
 import TrianguloRetangulo from "../models/TrianguloRetangulo.js";
 
 class TrianguloRetanguloService{
-    public verificar(ladoA : number = null, ladoB : number = null, ladoC : number = null) : TrianguloRetangulo{
+    public verificarDadosTrianguloRetangulo(ladoA : number = null, ladoB : number = null, ladoC : number = null) : TrianguloRetangulo{
         if(ladoA <= 0 || ladoB <= 0 || ladoC <= 0){
             throw new Error("Lado deve ser maior que zero.");
         }

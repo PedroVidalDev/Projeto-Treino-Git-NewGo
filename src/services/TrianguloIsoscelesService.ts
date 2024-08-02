@@ -1,7 +1,7 @@
 import TrianguloIsosceles from "../models/TrianguloIsosceles.js";
 
 class TrianguloIsoscelesService{
-    public verificar(lado : number = null, base : number = null, altura: number = null) : TrianguloIsosceles{
+    public verificarDadosTrianguloIsosceles(base : number = null, lado : number = null, altura: number = null) : TrianguloIsosceles{
         if(lado <= 0 || base <= 0){
             throw new Error("Lado deve ser maior que zero.");
         }
