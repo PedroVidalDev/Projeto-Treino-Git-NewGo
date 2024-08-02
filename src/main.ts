@@ -1,3 +1,5 @@
 import Menu from "./components/Menu.js";
 
-Menu.mostrarMenu();
+while(true){
+    Menu.mostrarMenu();
+}
